@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOFAN-MD</title>
+  <style>
+    /* Aurora Lights Animated Background */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(270deg, #ff7eb3, #ff758c, #8e54e9, #4776e6, #00ffaa);
+      background-size: 400% 400%;
+      z-index: -1;
+      animation: aurora 10s infinite ease-in-out;
+    }
+
+    @keyframes aurora {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: #fff;
+      flex-direction: column;
+    }
+
+    .main-box {
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.85);
+      border: 3px solid;
+      border-radius: 12px;
+      display: inline-block;
+      width: 250px;
+      animation: rainbow-border 3s linear infinite;
+      box-shadow: 0 0 10px #fff;
+    }
+
+    @keyframes rainbow-border {
+      0% { border-color: #ff0000; }
+      100% { border-color: #8a00ff; }
+    }
+
+    .rainbow-text {
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-image: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #47ff00, #00ffee, #0047ff, #8a00ff);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbow-text 3s infinite linear, blink 1.5s infinite alternate;
+    }
+
+    @keyframes blink {
+      0% { opacity: 1; }
+      100% { opacity: 0.6; }
+    }
+
+    .bot-image {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    #digital-clock {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .pak-flag {
+      width: 24px;
+      height: 24px;
+      animation: wave-flag 1s infinite alternate;
+    }
+
+    @keyframes wave-flag {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(10deg); }
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 6px 12px;
+      margin: 6px;
+      font-size: 12px;
+      text-decoration: none;
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 25px;
+      animation: rainbow-bg 3s linear infinite;
+      transition: all 0.4s ease-in-out;
+    }
+
+    @keyframes rainbow-bg {
+      0% { background: #ff0000; }
+      100% { background: #8a00ff; }
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #fff, 0 0 30px #fff;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-box">
+    <h1 class="rainbow-text">TOFAN MD</h1>
+
+    <!-- Bot Image Added Below Title -->
+    <img src="https://i.ibb.co/CsWcg9jq/shaban-md.jpg" alt="Bot Image" class="bot-image">
+
+    <!-- Digital Clock with Pakistan Flag -->
+    <div id="digital-clock">
+      <span id="time"></span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg" alt="Pakistan Flag" class="pak-flag">
+    </div
+
+    <a href="https://explicit-margot-shabansobxmd-26fe85c4.koyeb.app/pair" class="button">
+      <img src="https://i.ibb.co/8n2mZ3g6/shaban-md.jpg" alt="Lion Logo" class="icon">
+      PAIR
+    </a>
+
+    <a href="https://github.com/Qadeer-bhai" target="_blank" class="button">
+      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" class="icon">
+      GITHUB PROFILE
+    </a>
+
+    <a href="https://github.com/Qadeer-bhai/TOFAN-MD-V5/fork" target="_blank" class="button">
+      <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" class="icon">
+      FORK ON GITHUB
+    </a>
+
+    <a href="https://whatsapp.com/channel/0029VazjYjoDDmFZTZ9Ech3O" target="_blank" class="button">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" class="icon">
+      WhatsApp Channel
+    </a>
+
+    <a href="https://wa.me/923079749129" target="_blank" class="button">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" class="icon">
+      ADMIN CONTACT
+    </a>
+  </div>
+
+  <script>
+    // Live Digital Clock Script
+    function updateTime() {
+      const now = new Date();
+      document.getElementById('time').innerText = now.toLocaleTimeString();
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+  </script>
+</body>
+  </html>
